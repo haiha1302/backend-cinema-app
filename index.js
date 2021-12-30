@@ -27,6 +27,10 @@ app.use(cors({
 
 app.use('/auth', authRoute)
 
+app.get('/welcome', (req, res) => {
+    res.json('Welcome')
+})
+
 connectToMongo()
 
 const PORT = process.env.PORT || 5000
