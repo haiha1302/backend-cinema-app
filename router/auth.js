@@ -55,7 +55,7 @@ router.get('/login/failed', (req, res) => {
 
 router.get('/logout', (req, res) => {
     req.logout()
-    res.redirect(process.env.ORIGIN_URL)
+    res.redirect(CLIENT_URL)
 })
 
 // Login with Google
