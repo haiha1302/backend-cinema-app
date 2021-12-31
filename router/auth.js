@@ -4,7 +4,7 @@ const { registerUser, login } = require('../controller/authController')
 
 const router = express.Router()
 
-const CLIENT_URL = 'http://localhost:3000/'
+const CLIENT_URL = process.env.ORIGIN_URL
 
 router.post('/register', async (req, res) => {
     const username = req.body.username
