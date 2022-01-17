@@ -11,7 +11,7 @@ require('dotenv').config()
 const app = express()
 
 const ORIGIN_URL = process.env.ORIGIN_URL
-
+console.log(ORIGIN_URL);
 app.use(cookieSession({
     name: 'session',
     keys: ['SECRET_COOKIE_KEY'],
