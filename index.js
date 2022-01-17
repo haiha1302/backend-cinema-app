@@ -29,7 +29,7 @@ app.use(cors({
 
 app.use('/auth', authRoute)
 
-app.get('/welcome', (req, res) => {
+app.get('/', (req, res) => {
     res.json('Welcome')
 })
 
