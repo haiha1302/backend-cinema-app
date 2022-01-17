@@ -10,6 +10,8 @@ require('dotenv').config()
 
 const app = express()
 
+const ORIGIN_URL = process.env.ORIGIN_URL
+
 app.use(cookieSession({
     name: 'session',
     keys: ['SECRET_COOKIE_KEY'],
@@ -20,7 +22,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(cors({
-    origin: process.env.ORIGIN_URL,
+    origin: ORIGIN_URL,
     methods: 'GET, POST, PUT, DELETE',
     credentials: true
 }))
